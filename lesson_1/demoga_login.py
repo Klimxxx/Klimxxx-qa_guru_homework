@@ -1,7 +1,19 @@
+from selene.support.shared import browser
 from selene import browser, have
 
 
-browser.config.timeout = 40
+from selene import be, have, browser
+from selenium import webdriver
+
+browser.config.driver_options = webdriver.ChromeOptions()
+browser.config.driver_options.binary_location = (
+    '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome')
+
+
+
+
+
+browser.config.timeout = 10
 # для работы следующей строчки необходим установка селениум 4.5.0
 browser.config.hold_driver_at_exit = True
 browser.open('https://demoqa.com/text-box')

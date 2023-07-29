@@ -1,5 +1,22 @@
-from selene.support.shared import browser
+
 from selene import be, have
+from selene import browser
+from selenium import webdriver
+
+browser.config.driver_options = webdriver.ChromeOptions()
+browser.config.driver_options.binary_location = (
+    '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'
+)
+
+
+
+
+
+
+
+
+
+
 
 browser.config.timeout = 40
 browser.config.hold_driver_at_exit = True
